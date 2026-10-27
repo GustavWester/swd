@@ -4,4 +4,5 @@ VisitorPattern.Folder movies = new VisitorPattern.Folder("Movies");
 VisitorPattern.Folder animatedMovies = new VisitorPattern.Folder("Animated Movies");
 
 animatedMovies.AddFile(movie);
-animatedMovies.printFolder();
+movies.AddSubFolder(animatedMovies);
+movies.printFolder();

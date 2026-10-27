@@ -3,17 +3,14 @@ namespace VisitorPattern;
 public class Folder
 {
     private string name;
-    public Folder[] subFolders;
-    public File[] files;
+    private List<Folder> subFolders = new();
+    private List<File> files = new();
 
     public Folder(string name)
     {
         this.SetName(name);
-        files = new File[] { };
-        subFolders = new Folder[] { };
     }
     
-
     public void SetName(string name)
     {
         this.name = name;
@@ -34,9 +31,8 @@ public class Folder
         
         if (!subFolders.Contains(f))
         {
-            this.subFolders[this.subFolders.Length - 1] = f;
+            this.subFolders.Add(f);
         }
-        
         
     }
 
@@ -44,7 +40,7 @@ public class Folder
     {
         if (!files.Contains(f))
         {
-            this.files[this.files.Length] = f;
+            this.files.Add(f);
         }
         
         else
@@ -57,6 +53,7 @@ public class Folder
 
     public void printFolder()
     {
+        Console.WriteLine($"Folder Name: {name}");
 
         if (this.files != null)
         {
@@ -66,7 +63,7 @@ public class Folder
             }
         }
         
-        if (subFolders.Length != 0)
+        if (subFolders.Count != 0)
         {
             foreach (Folder f in this.subFolders)
             {
