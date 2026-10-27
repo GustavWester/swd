@@ -42,39 +42,29 @@ public class Folder
         {
             this.files.Add(f);
         }
-        
-        else
-        {
-            return;
-        }
-        
-        
     }
 
     public void printFolder()
     {
         Console.WriteLine($"Folder Name: {name}");
 
+        if (subFolders.Count != 0)
+        {
+            
+            foreach (Folder f in this.subFolders)
+            {
+                f.printFolder();
+            }
+            
+        }
+        
         if (this.files != null)
         {
             foreach (File f in this.files)
             {
-                Console.WriteLine("File:" + f.getName());
+                Console.WriteLine(" --File: " + f.getName());
             }
         }
-        
-        if (subFolders.Count != 0)
-        {
-            foreach (Folder f in this.subFolders)
-            {
-                Console.WriteLine("Folder: " + f.GetName());
-                f.printFolder();
-                return;
-            }
-
-        }
-
-        return;
     }
     
 }
