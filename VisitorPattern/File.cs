@@ -10,19 +10,4 @@ public class File : Directory, IVisitableElement
     }
     
     public void Accept(IVisitor visitor) => visitor.Visit(this);
-
-    public void setName(string name)
-    {
-        this.name = name;
-    }
-
-    public string getName()
-    {
-        return name;
-    }
-
-    public double getSize()
-    {
-        return size;
-    }
 }
