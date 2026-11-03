@@ -3,9 +3,7 @@ public class DepthVisitor : IVisitor
 {
     public double totalDepth = 0;
     private double currentDepth = 0;
-    public void Visit(File fi)
-    {
-    }
+    public void Visit(File fi){}
     public void Visit(Folder fo)
     {
         currentDepth++;

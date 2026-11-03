@@ -2,6 +2,7 @@ namespace VisitorPattern;
 
 public class File : Directory, IVisitableElement
 {
+    public string content = "0101010111000";
     public File(string name, double size) : base(name, size)
     {
         name = base.name;

@@ -1,0 +1,103 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="_1_zHrb5BUABA6TKUNhF">
+    <mxGraphModel dx="1201" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-18" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IVisitor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;void Visit (File fi)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; void Visit (Folder fo)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="475" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-19" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Directory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ string: name&lt;br&gt;+ double: size&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-20" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IVisitableElement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; void: Accept (IVisitor visitor)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="475" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-21" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;File&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;string: content&lt;/p&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-25" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-21" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-19" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="210" y="380" as="sourcePoint" />
+            <mxPoint x="370" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-26" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-41" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-19" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="210" y="440" as="sourcePoint" />
+            <mxPoint x="250" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-27" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-41" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="Vx4_dt1OwsmlIPwrC1FA-20" value="">
+          <mxGeometry relative="1" width="160" x="0.3996" as="geometry">
+            <Array as="points">
+              <mxPoint x="285" y="310" />
+              <mxPoint x="360" y="310" />
+              <mxPoint x="410" y="310" />
+              <mxPoint x="410" y="260" />
+              <mxPoint x="440" y="260" />
+            </Array>
+            <mxPoint x="270" y="440" as="sourcePoint" />
+            <mxPoint x="460" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-28" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-21" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-20" value="">
+          <mxGeometry relative="1" width="160" x="-0.1084" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="340" />
+              <mxPoint x="440" y="340" />
+              <mxPoint x="440" y="300" />
+            </Array>
+            <mxPoint x="280" y="400" as="sourcePoint" />
+            <mxPoint x="510" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-29" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-20" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-18" value="">
+          <mxGeometry relative="1" width="160" x="-0.3053" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="200" />
+            </Array>
+            <mxPoint x="645" y="210" as="sourcePoint" />
+            <mxPoint x="875" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-30" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SizeVisitor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ double: totalsize&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style: solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ void: Visit (File: fi)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+&amp;nbsp;void: Visit (Folder fo)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="310" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-32" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; text-align: left;&quot;&gt;&lt;b&gt;DepthVisitor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ double: totalDepth&lt;br&gt;-&amp;nbsp; double: currentDepth&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ void: Visit (File fi)&lt;br&gt;+ void: Visit (Folder fo)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="490" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-33" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; text-align: left;&quot;&gt;&lt;b&gt;PathVisitor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ string: path&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ void: Visit (File fi)&lt;br&gt;+ void: Visit (Folder fo)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="670" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-34" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-33" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-20" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="805" y="420" as="sourcePoint" />
+            <mxPoint x="775" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-35" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-32" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-20" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="625" y="420" as="sourcePoint" />
+            <mxPoint x="595" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-36" edge="1" parent="1" source="Vx4_dt1OwsmlIPwrC1FA-30" style="endArrow=block;endFill=1;endSize=12;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;" target="Vx4_dt1OwsmlIPwrC1FA-20" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="585" y="400" as="sourcePoint" />
+            <mxPoint x="555" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-37" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; text-align: left;&quot;&gt;&lt;b&gt;PrintTreeVisitor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;-&amp;nbsp; int: depth&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ void: Visit (File fi)&lt;br&gt;+ void: Visit (Folder fo)&lt;br&gt;-&amp;nbsp; void: printDepth (int depth)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="310" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-38" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; text-align: left;&quot;&gt;&lt;b&gt;PrintTreeVisitor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ double: totalDepth&lt;br&gt;-&amp;nbsp; double: currentDepth&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ void: Visit (File fi)&lt;br&gt;+ void: Visit (Folder fo)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="160" x="490" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Vx4_dt1OwsmlIPwrC1FA-41" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Folder&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+ List&amp;lt;Folder&amp;gt;: subFolders&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+ List&amp;lt;File&amp;gt;: files&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ void: AddFile (File fi)&lt;br&gt;+ void: AddSubFolder (Folder fo)&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="190" x="190" y="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
