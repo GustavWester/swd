@@ -8,7 +8,6 @@ public class SizeVisitor : IVisitor
     }
     public void Visit(Folder fo)
     {
-        totalSize += fo.size;
         if (fo.files.Count != 0)
         {
             foreach (File fi in fo.files)

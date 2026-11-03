@@ -25,10 +25,13 @@ var directories = new List<IVisitableElement>
 
 var pathVisitor = new PathVisitor();
 var sizeVisitor = new SizeVisitor();
+var depthVisitor = new DepthVisitor();
 
 directories.ForEach(e => e.Accept(sizeVisitor));
 directories.ForEach(e => e.Accept(pathVisitor));
+directories.ForEach(e => e.Accept(depthVisitor));
 Console.WriteLine($"{sizeVisitor.totalSize}");
 Console.WriteLine($"{pathVisitor.path}");
+Console.WriteLine($"{depthVisitor.totalDepth}");
 
 
