@@ -1,5 +1,3 @@
-﻿    
-using System.Diagnostics;
 using VisitorPattern;
 
 VisitorPattern.File movie = new VisitorPattern.File("Incredibles", 1);
@@ -17,7 +15,7 @@ liveActionMovies.AddFile(movie2);
 animatedMovies.AddSubFolder(pixarMovies);
 movies.AddSubFolder(animatedMovies);
 movies.AddSubFolder(liveActionMovies);
-movies.printFolder(0);
+movies.Accept(new PrintTreeVisitor());
 
 
 var directories = new List<IVisitableElement>

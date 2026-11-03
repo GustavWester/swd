@@ -1,7 +1,9 @@
 namespace VisitorPattern;
 
 public class PrintTreeVisitor : IVisitor
-{   
+{
+    private int depth = 0;
+
     private void printDepth(int depth)
     {
         while (depth > 0)
@@ -11,27 +13,27 @@ public class PrintTreeVisitor : IVisitor
         }
     }
 
-    public void printTree(int depth)
+    public void Visit(File fi)
     {
-        printTree(depth);
-        Console.WriteLine($"Folder Name: {name}");
+        printDepth(depth);
+        Console.WriteLine("File: " + fi.name);
+    }
+
+    public void Visit(Folder fo)
+    {
+        printDepth(depth);
+        Console.WriteLine($"Folder Name: {fo.name}");
         depth++;
-        
-        if (files.Count != 0)
+
+        foreach (File fi in fo.files)
         {
-            printDepth(depth);
-            foreach (File fi in files)
-            {
-                Console.WriteLine("File: " + fi.getName());
-            }
+            fi.Accept(this);
         }
-        
-        if (subFolders.Count != 0)
+
+        foreach (Folder sf in fo.subFolders)
         {
-            foreach (Folder fo in this.subFolders)
-            {
-                fo.printTree(depth);
-            }
-        } 
+            sf.Accept(this);
+        }
+        depth--;
     }
 }
