@@ -1,26 +1,19 @@
 namespace VisitorPattern;
 
-public class Folder
+public class Folder : Directory, IVisitableElement
 {
-    private string name;
-    private List<Folder> subFolders = new();
-    private List<File> files = new();
+    
+    public List<Folder> subFolders = new();
+    public List<File> files = new();
 
-    public Folder(string name)
+    public Folder(string name, double size) : base(name, size)
     {
-        this.SetName(name);
+        name = base.name;
+        size = base.size;
     }
     
-    public void SetName(string name)
-    {
-        this.name = name;
-    }
-
-    public string GetName()
-    {
-        return name;
-    }
-
+    public void Accept(IVisitor visitor) => visitor.Visit(this);
+    
     public void AddSubFolder(Folder f)
     {
 
@@ -38,33 +31,55 @@ public class Folder
 
     public void AddFile(File f)
     {
+        
+        if (f == null)
+        {
+            return;
+        }
+        
         if (!files.Contains(f))
         {
             this.files.Add(f);
         }
     }
 
-    public void printFolder()
+    public void printDepth(int depth)
     {
-        Console.WriteLine($"Folder Name: {name}");
-
-        if (subFolders.Count != 0)
+        while (depth > 0)
         {
-            
-            foreach (Folder f in this.subFolders)
-            {
-                f.printFolder();
-            }
-            
-        }
-        
-        if (this.files != null)
-        {
-            foreach (File f in this.files)
-            {
-                Console.WriteLine(" --File: " + f.getName());
-            }
+            Console.Write(" - ");
+            depth--;
         }
     }
+
+    public void printFolder(int depth)
+    {
+        printDepth(depth);
+        Console.WriteLine($"Folder Name: {name}");
+        depth++;
+        
+        if (files.Count != 0)
+        {
+            printDepth(depth);
+            foreach (File f in files)
+            {
+                Console.WriteLine("File: " + f.getName());
+            }
+        }
+        
+        if (subFolders.Count != 0)
+        {
+            foreach (Folder f in this.subFolders)
+            {
+                f.printFolder(depth);
+            }
+        }
+        
+        
+        
+       
+    }
+    
     
 }
+    

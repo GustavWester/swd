@@ -1,15 +1,15 @@
 namespace VisitorPattern;
 
-public class File
+public class File : Directory, IVisitableElement
 {
-    private string name;
-    private double size;
-
-    public File(string name)
+    public File(string name, double size) : base(name, size)
     {
-        this.setName(name);
+        name = base.name;
+        size = base.size;
         
     }
+    
+    public void Accept(IVisitor visitor) => visitor.Visit(this);
 
     public void setName(string name)
     {
