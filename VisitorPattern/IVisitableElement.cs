@@ -40,3 +40,54 @@ public class SizeVisitor : IVisitor
     }
 }
 
+public class DepthVisitor : IVisitor
+{
+    public double totalDepth = 0;
+    public void Visit(File fi)
+    {
+        totalDepth = 1;
+    }
+    public void Visit(Folder fo)
+    {
+        if (fo.subFolders.Count != 0)
+        {
+            foreach (Folder sf in fo.subFolders)
+            {
+                totalDepth++;
+            }
+        }
+    }
+}
+
+public class PathVisitor : IVisitor
+{
+    public string path = "";
+    public void Visit(File fi)
+    {
+        path = "/" +  fi.name;
+    }
+    public void Visit(Folder fo)
+    {
+        path  += "/" + fo.name;
+        if (fo.subFolders.Count != 0)
+        {
+            foreach (Folder sf in fo.subFolders)
+            {
+                path  += "/" + sf.name;
+                if (sf == fo)
+                {
+                    path = "/" +  sf.name;
+                }
+                else if  (sf != fo)
+                { 
+                    Visit(sf);
+                }
+                else
+                {
+                    path = "";
+                }
+            }
+        }
+    }
+}
+

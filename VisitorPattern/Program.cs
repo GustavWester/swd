@@ -1,4 +1,5 @@
 ﻿    
+using System.Diagnostics;
 using VisitorPattern;
 
 VisitorPattern.File movie = new VisitorPattern.File("Incredibles", 1);
@@ -21,14 +22,15 @@ movies.printFolder(0);
 
 var directories = new List<IVisitableElement>
 {
-    animatedMovies,
     pixarMovies,
-    liveActionMovies,
 };
 
+var pathVisitor = new PathVisitor();
 var sizeVisitor = new SizeVisitor();
 
 directories.ForEach(e => e.Accept(sizeVisitor));
+directories.ForEach(e => e.Accept(pathVisitor));
 Console.WriteLine($"{sizeVisitor.totalSize}");
+Console.WriteLine($"{pathVisitor.path}");
 
 
